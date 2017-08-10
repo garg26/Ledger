@@ -1,9 +1,11 @@
 package com.example.kartikeya.ledger;
 
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
 
-public class HomeActivity extends AppCompatActivity {
+import simplifii.framework.activity.BaseActivity;
+
+public class HomeActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
