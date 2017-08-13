@@ -6,7 +6,7 @@ import simplifii.framework.R;
 
 public interface AppConstants {
 
-    public static final String DEF_REGULAR_FONT = "Roboto-Regular.ttf";
+    public static final String DEF_REGULAR_FONT = "Ubuntu-R.ttf";
     String APP_LINK = "https://drive.google.com/file/d/0B8wKJnD6sONHeXlUbm5pOTk4dGM/view?usp=sharing";
     LinkedHashMap<Integer, String> storeCategory = new LinkedHashMap<Integer, String>();
     int TASKCODE_REGISTER = 10;

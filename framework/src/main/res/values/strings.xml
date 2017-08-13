@@ -91,5 +91,9 @@
     <string name="error_invalid_email">You entered invalid email address..!</string>
     <string name="image_folder_name">Images</string>
     <string name="insufficient_memory">Insufficient Memory</string>
-    <string name="empty_view_text">No data found</string>
+    <string name="empty_view_text">No data found</string>\
+
+    <string name="invalid_email">Please enter a valid email address</string>
+    <string name="default_errore_msg">Field cannot be empty</string>
+    <string name="invalid_phone_number">Please enter 10 digit mobile number</string>
 </resources>
