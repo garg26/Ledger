@@ -10,7 +10,7 @@ import com.google.gson.annotations.SerializedName;
 public class UserLoginResponse {
     @SerializedName("lastLogin")
     @Expose
-    private Integer lastLogin;
+    private Long lastLogin;
     @SerializedName("phone")
     @Expose
     private String phone;
@@ -42,11 +42,11 @@ public class UserLoginResponse {
     @Expose
     private String meta;
 
-    public Integer getLastLogin() {
+    public Long getLastLogin() {
         return lastLogin;
     }
 
-    public void setLastLogin(Integer lastLogin) {
+    public void setLastLogin(Long lastLogin) {
         this.lastLogin = lastLogin;
     }
 
@@ -129,4 +129,7 @@ public class UserLoginResponse {
     public void setMeta(String meta) {
         this.meta = meta;
     }
+
 }
+
+

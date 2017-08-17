@@ -9,7 +9,7 @@ import java.util.Locale;
 
 public interface AppConstants {
 
-    String DEF_REGULAR_FONT = "ClearSans-Regular.ttf";
+    String DEF_REGULAR_FONT = "Roboto-Regular.ttf";
     String APP_LINK = "https://drive.google.com/file/d/0B8wKJnD6sONHeXlUbm5pOTk4dGM/view?usp=sharing";
     LinkedHashMap<Integer, String> storeCategory = new LinkedHashMap<Integer, String>();
     String REGISTRATION_COMPLETE = "registrationComplete";
@@ -22,6 +22,7 @@ public interface AppConstants {
     String TOKEN = "token";
     String USER_CLINIC = "Clinic";
     String USER_DOCTOR = "Doctor";
+    int PLACE_PICKER_REQUEST = 1;
 
     interface FRAGMENT_TYPES {
         int PROFILE_LIST_FRAGMENT = 1;
@@ -42,30 +43,6 @@ public interface AppConstants {
         String TUTOR_DATA = JSON_FOLDER + "/tutor_data.json";
     }
 
-    interface ClinicProfileConstants {
-        String CONTACT_CLINIC_DETAILS = "Contact & Clinic Details";
-        int CONTACT_CLINIC_ITEM_ID = 1;
-    }
-    interface TimingsConstants {
-        String TIMINGS_DETAILS = "Timings";
-        int TIMINGS_ITEM_ID = 2;
-    }
-    interface LocationPhotosConstants {
-        String LOCATION_PHOTOS_DETAILS = "Location & Photos";
-        int LOCATION_PHOTOS_ITEM_ID = 3;
-    }
-    interface DoctorsConstants {
-        String DOCTORS_DETAILS = "Doctors";
-        int DOCTORS_ITEM_ID = 4;
-    }
-    interface ServiceConstants {
-        String SPECIALIZATIONS_SERVICE_DETAILS = "Specializations & Services";
-        int SPECIALIZATIONS_SERVICE_ITEM_ID = 5;
-    }
-    interface AwardConstants {
-        String AWARD_ACCEREDATIONS_DETAILS = "Award & Acceredations";
-        int AWARD_ACCEREDATIONS_ITEM_ID = 6;
-    }
 
 
     interface REQUEST_CODES {
@@ -226,6 +203,10 @@ public interface AppConstants {
 
         String USER_REGISTER = BASEURL + "users/register";
         String USER_LOGIN = BASEURL + "users/login";
+        String USER_TOKEN = BASEURL + "users/isvalidusertoken/";
+        String FILE_UPLOAD = BASEURL + "files/userImage/user.png?overwrite=true";
+        String USER_IMAGE = BASEURL + "files/userImage/";
+        String ACCOUNT_INFO = BASEURL + "data/Accounts";
     }
 
     public static interface PREF_KEYS {
@@ -370,6 +351,9 @@ public interface AppConstants {
         int GET_SHOP_CATEOGRY = 1;
         int USER_REGISTER = 2;
         int USER_LOGIN = 3;
+        int USER_TOKEN = 4;
+        int FILE_UPLOAD = 5;
+        int USER_ACCOUNT = 6;
     }
 
     interface ProfileStructureType {
@@ -439,6 +423,24 @@ public interface AppConstants {
         int CHAT = 24;
         int SHARE_FEED_ON_CHAT = 25;
     }
+
+     interface ACCOUNT{
+        String ACCOUNT = "Accounts";
+        int ACCOUNT_ID = 1;
+    }
+     interface CREDITDEBIT{
+        String CREDITDEBIT = "Creadit/Debit";
+        int CREDITDEBIT_ID = 2;
+    }
+     interface HISTORY{
+        String HISTORY = "History";
+        int HISTORY_ID = 3;
+    }
+     interface SETTINGS{
+        String SETTINGS = "Settings";
+        int SETTINGS_ID = 4;
+    }
+
 
 }
 

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:paddingLeft="26dp"
+    android:paddingRight="26dp"
+    android:paddingTop="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_drawer_image"
+        android:layout_width="20dp"
+        android:layout_height="20dp" />
+
+    <simplifii.framework.widgets.CustomFontTextView
+        style="@style/tv_style"
+        android:textColor="@color/black"
+        android:layout_marginTop="0dp"
+        android:layout_toRightOf="@+id/iv_drawer_image"
+        android:id="@+id/tv_drawer_item"
+        android:layout_marginLeft="22dp"
+        />
+
+
+</RelativeLayout>

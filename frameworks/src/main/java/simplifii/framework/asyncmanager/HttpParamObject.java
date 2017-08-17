@@ -19,14 +19,27 @@ public class HttpParamObject implements Serializable {
     private Class classType;
     private String method = ClientURLConnection.GET_METHOD;
     private String json = "";
-    private String contentType = "application/x-www-form-urlencoded;charset=UTF-8";
+    private String contentType = "";
 
     public HttpParamObject() {
-        String authToken = Preferences.getData(AppConstants.PREF_KEYS.USER_TOKEN, "");
+        addAuthToken();
+    }
+
+    public void addAuthToken() {
+        String authToken = Preferences.getData(Preferences.KEY_AUTH_TOKEN, "");
         if (!TextUtils.isEmpty(authToken)) {
-            addHeader(AppConstants.X_ACCESS_TOKEN, authToken);
+            addHeader(Preferences.KEY_AUTH_TOKEN, authToken);
+            // addHeader("cache-control", "no-cache");
+            // addHeader("postman-token", "adaba827-9d0a-be7a-8200-201af8ea9096");
         }
     }
+
+//    public HttpParamObject() {
+//        String authToken = Preferences.getData(AppConstants.PREF_KEYS.USER_TOKEN, "");
+//        if (!TextUtils.isEmpty(authToken)) {
+//            addHeader(AppConstants.X_ACCESS_TOKEN, authToken);
+//        }
+//    }
 
     public String getContentType() {
         return contentType;

@@ -18,6 +18,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import simplifii.framework.R;
+import simplifii.framework.activity.DeleteProfileImageActivity;
 import simplifii.framework.utility.AppConstants;
 import simplifii.framework.utility.Util;
 
@@ -25,6 +26,7 @@ public class MediaFragment extends Fragment {
     public final int REQUEST_CODE_GALLARY = 50;
     public final int REQUEST_CODE_CAMERA = 51;
     public final int REQUEST_CODE_AUDIO = 52;
+    public final int REQUEST_CODE_REMOVE = 54;
     public final int REQUEST_CODE_PICK_VIDEO = 53;
     public Uri imageUri;
     MediaListener mediaListener;
@@ -32,7 +34,7 @@ public class MediaFragment extends Fragment {
     public void getImage(final MediaListener mediaListener, Context context) {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setTitle("Choose a picture");
-        ArrayAdapter adapter = new ArrayAdapter(context, android.R.layout.simple_list_item_1, new String[]{"Camera", "Gallery"});
+        ArrayAdapter adapter = new ArrayAdapter(context, android.R.layout.simple_list_item_1, new String[]{"Camera", "Gallery","Remove"});
         builder.setAdapter(adapter, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -41,10 +43,19 @@ public class MediaFragment extends Fragment {
                 } else if (which == 1) {
                     getImageFromGallery(mediaListener);
                 }
+                else if(which==2){
+                    deleteImage(mediaListener);
+                }
             }
         });
         AlertDialog dialog = builder.create();
         dialog.show();
+    }
+
+    private void deleteImage(MediaListener mediaListener) {
+        this.mediaListener = mediaListener;
+        Intent intent = new Intent(getActivity(),DeleteProfileImageActivity.class);
+        startActivityForResult(intent,REQUEST_CODE_REMOVE);
     }
 
     public void getImageFromCamera(MediaListener mediaListener) {
@@ -135,6 +146,12 @@ public class MediaFragment extends Fragment {
             case REQUEST_CODE_PICK_VIDEO:
                 mediaListener.setUri(data.getData(), AppConstants.MEDIA_TYPES.VIDEO);
                 break;
+            case REQUEST_CODE_REMOVE:
+                if (data.hasExtra("remove_image")) {
+                    // remove/reset the image here
+                    mediaListener.setUri(data.getData(),AppConstants.MEDIA_TYPES.IMAGE);
+                }
+
         }
     }
 

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_profile_pic"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/profile" />
+
+        <simplifii.framework.widgets.CustomFontTextView
+            android:id="@+id/tv_shop_name"
+            style="@style/tv_style"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_profile_pic"
+            android:text="@string/departmental_store"
+            android:layout_marginLeft="@dimen/margin_16dp"
+            android:layout_marginTop="0dp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:scaleType="centerCrop"
+        android:src="@color/gray" />
+
+
+</LinearLayout>

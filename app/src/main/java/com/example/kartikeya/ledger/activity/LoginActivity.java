@@ -64,14 +64,14 @@ public class LoginActivity extends BaseActivity {
         }
         switch (taskCode){
             case AppConstants.TASKCODES.USER_LOGIN:
-                startActivity(new Intent(this, HomeActivity.class));
-                finish();
-                UserLoginResponse userLoginResponse = new UserLoginResponse();
+                UserLoginResponse userLoginResponse = (UserLoginResponse) response;
                 String userToken = userLoginResponse.getUserToken();
                 if (CollectionUtils.isNotEmpty(userToken)){
-                    Preferences.saveData(Preferences.LOGIN_KEY,true);
-                    Preferences.saveData(Preferences.LOGIN_RESPONSE,userLoginResponse.toString());
+                    Preferences.saveData(Preferences.KEY_AUTH_TOKEN,userToken);
+                    Preferences.saveData(Preferences.LOGIN_RESPONSE,userLoginResponse.getOwnerId());
                     showToast("User Successfully Login");
+                    startNextActivity(HomeActivity.class);
+                    finish();
                 }
                 else{
                     showToast(R.string.fail);

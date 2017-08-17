@@ -3,4 +3,6 @@
     <color name="colorPrimary">#50a1b6</color>
     <color name="colorPrimaryDark">#081f33</color>
     <color name="colorAccent">#7c7c7c</color>
+    <color name="tranceparent_black">#90000000</color>
+    <color name="tranceparent_gray">#807c7c7c</color>
 </resources>

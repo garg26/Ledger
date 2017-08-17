@@ -14,6 +14,7 @@ public class Preferences {
     private static final String PREF_NAME = "Pioneer_Prefs";
     public static final String LOGIN_KEY = "isUserLoggedIn";
     public static final String LOGIN_RESPONSE = "loginResponse";
+    public static final String KEY_AUTH_TOKEN = "user-token";
     private static final String ADDRESS_STATE = "address_state";
     private static final String ADDRESS_CITY = "address_city";
     private static final String ADDRESS_LOCALITY = "address_locality";

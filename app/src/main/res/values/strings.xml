@@ -5,7 +5,7 @@
     <string name="password">Password</string>
     <string name="sign_in">Sign In</string>
     <string name="register">Register</string>
-    <string name="font_bold">Ubuntu-B.ttf</string>
+    <string name="font_bold">Roboto-BlackItalic.ttf</string>
     <string name="forgot_password"><u>Forgot Password</u></string>
     <string name="shop_name">Shop Name</string>
     <string name="confirm_password">Confirm Password</string>
@@ -16,4 +16,16 @@
     <string name="error_password_not_match">Password do not match</string>
     <string name="user_already_register">Unable to register user. User already exists.</string>
     <string name="fail">Fail</string>
+    <string name="navigation_drawer_open">Navigation Open</string>
+    <string name="navigation_drawer_close">Navigation Close</string>
+    <string name="departmental_store">Departmental Store</string>
+    <string name="customer_name">Customer Name</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="female">Female*</string>
+    <string name="male">Male*</string>
+    <string name="address">Address*</string>
+    <string name="save">Save</string>
+    <string name="account_name">Account Name*</string>
+    <string name="account_phone_number">Account Phone Number*</string>
+    <string name="alternate_phone_number">Alternate Phone Number</string>
 </resources>

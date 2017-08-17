@@ -34,6 +34,7 @@ import org.json.JSONObject;
 
 import java.util.List;
 
+import simplifii.framework.ListAdapters.CustomSpinnerAdapter;
 import simplifii.framework.R;
 import simplifii.framework.exceptionhandler.RestException;
 import simplifii.framework.fragments.TaskFragment;
@@ -492,9 +493,9 @@ public class BaseActivity extends AppCompatActivity implements
     protected ArrayAdapter setSpinAdapter(List<String> list, int spinnerID) {
 
         Spinner spinner = (Spinner) findViewById(spinnerID);
-        ArrayAdapter dataAdapter = null;
+        CustomSpinnerAdapter dataAdapter = null;
         if (list != null) {
-            dataAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, list);
+            dataAdapter = new CustomSpinnerAdapter(this, android.R.layout.simple_spinner_item, list);
             dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spinner.setAdapter(dataAdapter);
         }

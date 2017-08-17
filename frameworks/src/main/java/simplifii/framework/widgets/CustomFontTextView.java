@@ -54,7 +54,7 @@ public class CustomFontTextView extends AppCompatTextView {
             if (TextUtils.isEmpty(asset)) {
                 asset = AppConstants.DEF_REGULAR_FONT;
             }
-            tf = Typeface.createFromAsset(ctx.getAssets(), "fonts/"+asset);
+            tf = Typeface.createFromAsset(ctx.getAssets(), asset);
         } catch (Exception e) {
             Log.e(TAG, "Error to get typeface: " + e.getMessage());
             return false;

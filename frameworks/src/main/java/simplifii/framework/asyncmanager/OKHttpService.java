@@ -98,6 +98,10 @@ public class OKHttpService extends GenericService {
     protected String getResponseReason(String body) {
         try {
             JSONObject obj = new JSONObject(body);
+            String code = obj.getString("code");
+            if (code.equals("3064")){
+                return "User session is expired.Login Again to access it";
+            }
             if (obj.has("message")) {
                 return obj.getString("message");
             }

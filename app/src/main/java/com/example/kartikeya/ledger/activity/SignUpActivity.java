@@ -22,7 +22,7 @@ public class SignUpActivity extends BaseActivity {
 
 
     private List<String> shop_category_list = new ArrayList<>();
-    private String shopCategory;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
